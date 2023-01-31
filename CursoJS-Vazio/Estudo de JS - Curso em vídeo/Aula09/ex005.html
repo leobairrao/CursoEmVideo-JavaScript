@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt arial;
+             
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body //Body virou minha variavel "corpo"
+        var p1 = window.document.getElementsByTagName('p')[0] //O primeiro paragrafo([0]) virou minha variavel "p1"
+        var p2 = window.document.getElementsByTagName('p')[1] //O segundo paragrafo([1]) virou minha variavel "p2"
+        //p1.style.color = "red" //DEIXA O P1(PRIMEIRO PARAGRAFO) RED
+        //corpo.style.background = "black"//DEIXA O CORPO (BODY) BLACK
+        //document.write(p1.innerText) //Apenas o texto
+        //document.write(p2.innerHTML) //O comando todo (O negrito vem junto, por exemplo)
+
+        //var d = window.document.getElementById('msg')//a div, através da id, virou minha variavel "d"
+        //No lugar de id poderia ser, name, class...
+        //d.style.background = 'green' //deixa o fundo de "d" green
+        //d.innerText = 'Qualquer coisa'//Troca o texto da div para este
+
+        var d = window.document.querySelector('div#msg')
+        //d.style.color = 'purple'       
+    </script>
+</body>
+</html>
